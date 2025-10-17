@@ -1,0 +1,30 @@
+paths:
+  data_dir: "./data/datasets"
+  checkpoint_dir: "./model/checkpoint"
+  best_ckpt_name: "best_model.pt"
+
+data:
+  dataset_name: "MNIST"
+  mean: 0.1307
+  std: 0.3081
+  batch_size: 128
+  num_workers: 2
+  val_split: 0.1
+  download: True
+  pin_memory: True
+
+model:
+  in_channels: 1
+  num_classes: 10
+  dropout: 0.0
+  use_batchnorm: False
+
+train:
+  epochs: 3
+  lr: 0.0001
+  weight_decay: 0.0
+  seed: 42
+  scheduler:
+    name: "steplr"
+    step_size: 2
+    gamma: 0.5

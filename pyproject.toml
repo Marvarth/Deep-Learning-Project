@@ -1,0 +1,14 @@
+[project]
+name="cnn-example"
+readme="READ.md"
+version="0.1.0"
+authors=[{name="Antonello Foggetti"}]
+
+dependencies = [
+    "torch>=2.3.0",
+    "torchvision>=0.18.0",
+    "numpy>=1.26.0",
+    "tqdm>=4.66.0",
+    "pyyaml>=6.0.0",
+    "Pillow>=10.0.0"
+]
