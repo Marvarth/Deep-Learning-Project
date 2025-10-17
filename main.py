@@ -2,7 +2,7 @@ import torch
 import yaml
 from data.processing_data import make_dataloader
 
-PATH_CONFIGS = "config\configs.yaml"
+PATH_CONFIGS = "config/configs.yaml"
 
 def load_config() -> dict:
     with open(PATH_CONFIGS, "r") as f:

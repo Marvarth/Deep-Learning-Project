@@ -8,7 +8,7 @@ def get_dataset_class(name: str):
     if not hasattr(datasets, name):
         raise ValueError(f"Dataset = {name} non trovato in torchvision.datasets")
 
-    return getattr(datasets,name)#la libreria datasets prenderà l'oggetto e il nome e restituira MNIST
+    return getattr(datasets,name)#la libreria datasets prenderà l'oggetto e il nome e restituirà MNIST
 
 def get_transform(mean: float, std: float) -> transforms.Compose:
     
