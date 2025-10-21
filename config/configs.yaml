@@ -1,6 +1,6 @@
 paths:
   data_dir: "./data/datasets"
-  checkpoint_dir: "./model/checkpoint"
+  checkpoints_dir: "./model/checkpoints"
   best_ckpt_name: "best_model.pt"
 
 data:
@@ -10,21 +10,24 @@ data:
   batch_size: 128
   num_workers: 2
   val_split: 0.1
-  download: True
-  pin_memory: True
+  download: true
+  pin_memory: true
 
 model:
   in_channels: 1
   num_classes: 10
-  dropout: 0.0
-  use_batchnorm: False
+  p_dropout: 0.0       # 0.3 per regolarizzare
+  use_batchnorm: false  # true per BN
 
 train:
   epochs: 3
-  lr: 0.0001
+  lr: 0.0003
   weight_decay: 0.0
   seed: 42
   scheduler:
     name: "steplr"
     step_size: 2
     gamma: 0.5
+
+eval:
+  batch_size: 256
